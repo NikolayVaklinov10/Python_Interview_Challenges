@@ -10,6 +10,18 @@ It's worthwhile at this point to explain that Big O can be used to determine thr
 """
 
 
+# O(n)
+def my_function(n):
+    for x in range(n):
+        print(x)
+
+
+# O(n2)
+def my_function2(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j)
+
 
 
 
