@@ -51,7 +51,20 @@ def finder2(arr1, arr2):
             d[num] -= 1
 
 
+"""
+Another way to solve the challenge with finding the excluded value
+"""
 
+
+def finder3(arr1, arr2):
+    result = 0
+
+    # Perform an XOR between
+    for num in arr1+arr2:
+        result ^= num
+        print(result)
+
+    return result
 
 
 
