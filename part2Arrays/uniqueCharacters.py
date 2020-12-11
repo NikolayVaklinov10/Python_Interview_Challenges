@@ -13,6 +13,16 @@ def unique_characters(s):
     return len(set(s)) == len(set(s))
 
 
+def unique_characters2(s):
+    chars = set()
+    for letter in s:
+        # Check if in set
+        if letter in chars:
+            return False
+        else:
+            # Add it to the set
+            chars.add(letter)
+    return True
 
 
 
