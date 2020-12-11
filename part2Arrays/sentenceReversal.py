@@ -21,6 +21,10 @@ def rev_word1(s):
     return " ".join(reversed(s.split()))
 
 
+def rev_word2(s):
+    return " ".join(s.split()[::-1])
+
+
 
 
 
