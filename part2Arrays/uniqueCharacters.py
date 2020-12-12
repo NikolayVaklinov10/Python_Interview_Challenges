@@ -10,19 +10,41 @@ built-in data structure but using a look-up method to check if the characters ar
 
 
 def unique_characters(s):
-    return len(set(s)) == len(set(s))
+    return len(set(s)) == len(s)
 
 
 def unique_characters2(s):
     chars = set()
-    for letter in s:
+    for let in s:
         # Check if in set
-        if letter in chars:
+        if let in chars:
             return False
         else:
             # Add it to the set
-            chars.add(letter)
+            chars.add(let)
     return True
+
+
+"""
+RUN THIS CELL TO TEST YOUR CODE>
+"""
+from nose.tools import assert_equal
+
+
+class TestUnique(object):
+
+    def test(self, sol):
+        assert_equal(sol(''), True)
+        assert_equal(sol('goo'), False)
+        assert_equal(sol('abcdefg'), True)
+        print('ALL TEST CASES PASSED')
+
+
+# Run Tests
+t = TestUnique()
+t.test(unique_characters)
+t.test(unique_characters2)
+
 
 
 
