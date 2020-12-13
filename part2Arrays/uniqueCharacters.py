@@ -15,13 +15,13 @@ def unique_characters(s):
 
 def unique_characters2(s):
     chars = set()
-    for let in s:
+    for letter in s:
         # Check if in set
-        if let in chars:
+        if letter in chars:
             return False
         else:
             # Add it to the set
-            chars.add(let)
+            chars.add(letter)
     return True
 
 
