@@ -55,7 +55,6 @@ def anagram2(s1, s2):
     return True
 
 
-
 class AnagramTest(object):
 
     def test(self, sol):
