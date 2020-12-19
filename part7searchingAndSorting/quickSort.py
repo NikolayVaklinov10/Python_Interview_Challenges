@@ -49,26 +49,3 @@ quick_sort(arr)
 print(arr)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
