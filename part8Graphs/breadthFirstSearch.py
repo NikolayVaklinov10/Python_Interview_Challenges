@@ -6,6 +6,19 @@ graph = {'A': set(['B', 'C']),
          'F': set(['C', 'E'])}
 
 
+# Connected Component
+def bfs(graph, start):
+    visited, queue = set(), [start]
+    while queue:
+        vertex = queue.pop(0)
+        if vertex not in visited:
+            visited.add(vertex)
+            queue.extend(graph[vertex] - visited)
+    return visited
+
+
+bfs(graph, 'A')
+
 
 
 
