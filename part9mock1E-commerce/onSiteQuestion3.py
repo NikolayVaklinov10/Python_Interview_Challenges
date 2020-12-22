@@ -42,18 +42,9 @@ def calc_rect_overlap(r1, r2):
     return {'x': x_overlap, 'y': y_overlap, 'w': w_overlap, 'h': h_overlap}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+r1 = {'x': 2, 'y': 4, 'w': 5, 'h': 12}
+r2 = {'x': 1, 'y': 5, 'w': 7, 'h': 14}
+print(calc_rect_overlap(r1, r2))
 
 
 
