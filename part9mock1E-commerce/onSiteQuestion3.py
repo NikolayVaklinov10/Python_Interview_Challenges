@@ -25,6 +25,22 @@ def calc_overlap(coor1, dim1, coor2, dim2):
     return greater, overlap
 
 
+# Now let's use this function to detect if the rectangles overlap!
+
+def calc_rect_overlap(r1, r2):
+    x_overlap, w_overlap = calc_overlap(r1['x'], r1['w'], r2['x'], r2['w'])
+
+    y_overlap, h_overlap = calc_overlap(r1['y'], r1['h'], r2['y'], r2['h'])
+
+    # If either returned None tuples, then there is no overlap!
+    if not w_overlap or not h_overlap:
+        print('There was no overlap!')
+
+        return None
+
+    # Otherwise return the dictionary format of the overlapping rectangle
+    return {'x': x_overlap, 'y': y_overlap, 'w': w_overlap, 'h': h_overlap}
+
 
 
 
