@@ -1,22 +1,25 @@
-def solution(num):
-
+def better_solution(num):
     if num < 0:
-        return ValueError
-
+        raise ValueError
     if num == 1:
         return 1
+    low = 0
+    high = 1 + (num / 2)
 
-    for k in range((num/2)+1):
+    while low + 1 < high:
+        mid = low + (high - low) / 2
+        square = mid ** 2
+        if square == num:
+            return mid
+        elif square < num:
+            low = mid
+        else:
+            high = mid
 
-        if k**2 == num:
-            return k
-        elif k**2 > num:
-            return k - 1
-
-    return k
+    return round(low)
 
 
-print(solution(14))
+print(better_solution(16))
 
 
 
