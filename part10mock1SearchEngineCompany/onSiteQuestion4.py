@@ -23,10 +23,3 @@ print(better_solution(16))
 
 
 
-
-
-
-
-
-
-
