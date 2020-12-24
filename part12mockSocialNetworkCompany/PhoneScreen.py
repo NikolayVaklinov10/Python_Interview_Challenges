@@ -11,4 +11,4 @@ def remove_duplicates(string):
     return ''.join(result)
 
 
-
+print(remove_duplicates("tree some"))
